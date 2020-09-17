@@ -9,5 +9,6 @@ public class Registry {
           unless more are needed, a possible RegistryUtil
             feel free to refactor every file i put in here, these are
               only for informational purposes
+               https://mcforge.readthedocs.io/en/latest/concepts/registries/#registries
      */
 }
