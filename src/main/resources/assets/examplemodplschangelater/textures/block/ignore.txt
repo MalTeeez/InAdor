@@ -1,0 +1,3 @@
+tbh only adding this so that
+it adds to the commit (its being weird)
+this folder is for block textures
