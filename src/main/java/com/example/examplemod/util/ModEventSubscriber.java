@@ -1,5 +1,6 @@
-package com.example.examplemod;
+package com.example.examplemod.util;
 
+import com.example.examplemod.ExampleMod;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
