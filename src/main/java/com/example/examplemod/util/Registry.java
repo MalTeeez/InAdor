@@ -1,14 +1,26 @@
 package com.example.examplemod.util;
 
-public class Registry {
+import com.example.examplemod.ExampleMod;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
-    /*
-     todo
-      this is most likely the registry class
-        which will register blocks / items / etc
-          unless more are needed, a possible RegistryUtil
-            feel free to refactor every file i put in here, these are
-              only for informational purposes
-               https://mcforge.readthedocs.io/en/latest/concepts/registries/#registries
+public class Registry {
+    private static final String _MODID = ExampleMod.MOD_ID;
+
+    public static DeferredRegister<Item> _ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, _MODID);
+
+    public static DeferredRegister<Block> _BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, _MODID);
+
+    /**
+    * public static RegistryEvent.NewRegistry _ITEMS = new RegistryEvent.NewRegistry();
+     * im not sure about using this (thers 0 to no documentation)
+     * so the code im keeping here is DeferredRegistry, but feel free to
+     * get the RE.NR to work :)
+
+     * also, add more if needed
      */
 }
+
