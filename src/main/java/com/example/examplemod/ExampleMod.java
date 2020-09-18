@@ -1,5 +1,7 @@
 package com.example.examplemod;
 
+import net.minecraft.item.*;
+import com.example.examplemod.util.Register;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,6 +28,7 @@ public class ExampleMod
     public static final String MOD_ID = "examplemod";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final ItemGroup GROUP; //Gotta register the ItemGroup Tabs first, also seems like a dumb way
 
     public ExampleMod() {
         // Register the setup method for modloading
@@ -81,6 +84,10 @@ public class ExampleMod
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+        }
+        @SubscribeEvent
+        public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
+            Register.registerItems(event);
         }
     }
 }
