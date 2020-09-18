@@ -28,7 +28,7 @@ public class ExampleMod
     public static final String MOD_ID = "examplemod";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
-    public static final ItemGroup GROUP; //Gotta register the ItemGroup Tabs first, also seems like a dumb way
+    //Gotta register the ItemGroup Tabs first, also seems like a dumb way
 
     public ExampleMod() {
         // Register the setup method for modloading
