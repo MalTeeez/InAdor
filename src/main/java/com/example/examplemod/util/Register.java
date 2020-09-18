@@ -21,9 +21,11 @@ public class Register {
     public static final RegistryObject<Item> Shiro =  Registry._ITEMS.register("Shiro", () -> SwordTool.newSword(ItemShiro));
 
 
-    public static void registerItemBlocks(final IForgeRegistry<Item> r) {
-        for (final Block block : ModBlocks.ItemBlockBlocks) {// also some kind of hybrid I should stop getting code from decompiled jars sorry love
-            r.register((IForgeRegistryEntry)new BBItemBlock(block, baseProperties())); //this need a few other functions and a helper class seems like a dumb idea
+
+    //public static void registerItemBlocks(final IForgeRegistry<Item> r) {
+
+      //  for (final Block block : ModBlocks.ItemBlockBlocks) {// also some kind of hybrid I should stop getting code from decompiled jars sorry love
+         //   r.register((IForgeRegistryEntry)new BBItemBlock(block, baseProperties())); //this need a few other functions and a helper class seems like a dumb idea
             /**
              * this throws years of errors because you don't have 'ItemBlockBlocks' from the
              * ModBlocks class. You're setting that to final Block block, which is then being added to this
@@ -34,12 +36,12 @@ public class Register {
              * which contains an instance of Sword.Properties specific to all ItemShiro instances
              * @see com.example.examplemod.util.Registry
              */
-        }
-    }
+      //  }
 
-    public static void registerItems(final RegistryEvent.Register<Item> event) {
-        final IForgeRegistry<Item> r = (IForgeRegistry<Item>)event.getRegistry(); // Technically this could have a list of registers running from the func before it with r. - but im too dumb : maybe this helps https://prnt.sc/ujrdz2
-        registerItemBlocks(r);
+ //   public static void registerItems(final RegistryEvent.Register<Item> event) {
+      //  final IForgeRegistry<Item> r = (IForgeRegistry<Item>)event.getRegistry(); // Technically this could have a list of registers running from the func before it with r. - but im too dumb : maybe this helps https://prnt.sc/ujrdz2
+      //  registerItemBlocks(r);
+
         /**
          * it does go through all registries , but tries to match <Type> first.
          * Thats why in Registry.java, I've laid out template DeferredRegistries
@@ -60,5 +62,5 @@ public class Register {
          */
 
 
-    }
+  //  }
 }

@@ -1,7 +1,5 @@
 package com.example.examplemod;
 
-import net.minecraft.item.*;
-import com.example.examplemod.util.Register;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -85,9 +83,9 @@ public class ExampleMod
             // register a new block here
             LOGGER.info("HELLO from Register Block");
         }
-        @SubscribeEvent
-        public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Register.registerItems(event);
-        }
+   //     @SubscribeEvent
+    //    public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
+     //       Register.registerItems(event);
+     //   }
     }
 }
