@@ -1,17 +1,15 @@
 package com.example.examplemod.common.items.tool.lib;
 
 import com.example.examplemod.api.ISword;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.SwordItem;
+import com.example.examplemod.init.ModItemGroups;
+import net.minecraft.item.*;
 
 public class SwordTool extends SwordItem implements ISword {
 
     private IItemTier tier;
 
-    public static SwordItem.Properties setProperties(int maxDmg, Rarity rarity){
-        SwordItem.Properties properties = new Item.Properties().maxDamage(maxDmg).rarity(rarity).maxStackSize(1);
+    public static SwordItem.Properties setProperties(int maxDmg, Rarity rarity, ItemGroup g){
+        SwordItem.Properties properties = new Item.Properties().maxDamage(maxDmg).rarity(rarity).group(g);
         return properties;
     }
 

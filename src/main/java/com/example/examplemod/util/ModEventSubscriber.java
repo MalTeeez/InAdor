@@ -1,6 +1,8 @@
 package com.example.examplemod.util;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.common.items.tiers.TierShiro;
+import com.example.examplemod.common.items.tool.ItemShiro;
 import com.example.examplemod.init.ModItemGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -17,7 +19,8 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                setup(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)), "hello_inventory")
+                setup(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)), "hello_inventory"),
+                setup(new ItemShiro(TierShiro.shiro, 120, 9.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)), "shiro")
         );
        /*
        Sad try to get BlockItems :(

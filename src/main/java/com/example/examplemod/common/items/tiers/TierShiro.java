@@ -4,6 +4,11 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
 public class TierShiro {
+    // TODO revamp this tier class
+    /**
+     * @see net.minecraft.item.ItemTier
+     * @see net.minecraft.item.Items
+     */
 
     public static IItemTier shiro = new IItemTier() {
         @Override
