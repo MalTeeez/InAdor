@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class Registry {
-    private static final String _MODID = ExampleMod.MOD_ID;
+    private static final String _MODID = ExampleMod.MODID;
 
     public static DeferredRegister<Item> _ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, _MODID);
 

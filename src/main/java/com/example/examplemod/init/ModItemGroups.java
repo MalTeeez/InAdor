@@ -23,6 +23,6 @@ public class ModItemGroups {
 
     }
 
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MOD_ID, () -> new ItemStack(ModItems.HELLO_INVENTORY));
+    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(ModItems.HELLO_INVENTORY));
 
 }
