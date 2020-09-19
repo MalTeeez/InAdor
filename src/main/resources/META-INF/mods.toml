@@ -4,9 +4,9 @@ license="All rights reserved"
 issueTrackerURL="https://github.com/MalTeeez/modname/issues"
 
 [[mods]] #m
-modId="examplemod" #m
+modId="inador" #m
 version="${file.jarVersion}" #m
-displayName="Example Mod" #m
+displayName="InAdor" #m
 displayURL="http://91.200.100.15/"
 logoFile="logo.png"
 credits="<3"
@@ -16,14 +16,14 @@ Love, Cheese and small house plants
 
 luv u bella. <3
 '''
-[[dependencies.examplemod]]
+[[dependencies.inador]]
     modId="forge" #m
     mandatory=true #m
     versionRange="[32,)" #m
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.inador]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.1]"

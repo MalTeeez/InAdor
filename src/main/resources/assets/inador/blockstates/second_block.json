@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "inador:block/second_block" }
+    ]
+  }
+}

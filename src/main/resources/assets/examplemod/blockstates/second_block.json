@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "": [
-      { "model": "examplemod:block/second_block" }
-    ]
-  }
-}
