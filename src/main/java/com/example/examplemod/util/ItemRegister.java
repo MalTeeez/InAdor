@@ -1,5 +1,6 @@
 package com.example.examplemod.util;
 
+import com.example.examplemod.ExampleMod;
 import com.example.examplemod.common.items.tiers.MasterTiers;
 import com.example.examplemod.common.items.tool.ItemShiro;
 import com.example.examplemod.init.ModItemGroups;
