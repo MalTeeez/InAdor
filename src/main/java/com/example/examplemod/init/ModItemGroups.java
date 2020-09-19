@@ -2,6 +2,7 @@ package com.example.examplemod.init;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.ModRegister;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -22,5 +23,5 @@ public class ModItemGroups {
             return iconSupplier.get();
         }
     }
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(ModRegister.HELLO_INVENTORY)); //Icon wont register anymore cuz MODITEMS Class is depreceated
+    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)))); //Icon wont register anymore cuz MODITEMS Class is depreceated
 }

@@ -15,8 +15,10 @@ import static com.example.examplemod.ExampleMod.MODID;
 @SuppressWarnings({"unused"})
 public class ModRegister {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
+    private static String _MODID = ExampleMod.MODID;
+
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, _MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, _MODID);
 
     //BLOCK MASTER REGISTRY
     public static final RegistryObject<Block> ROCK = BLOCKS.register("rock", () -> new Block(Block.Properties.create(Material.ROCK)));
@@ -26,5 +28,5 @@ public class ModRegister {
     //ITEM MASTER REGISTRY
     public static final RegistryObject<Item> DUST = ITEMS.register("dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HELLO_INVENTORY = ITEMS.register("hello_inventory", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<Item> SHIRO = ITEMS.register("dust", () -> new ItemShiro(TierShiro.shiro, 120, 9.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro", () -> new ItemShiro(TierShiro.shiro, 120, 9.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 }
