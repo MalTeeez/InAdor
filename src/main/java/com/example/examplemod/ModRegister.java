@@ -1,6 +1,6 @@
 package com.example.examplemod;
 
-import com.example.examplemod.common.items.tiers.TierShiro;
+import com.example.examplemod.common.items.tiers.MasterTiers;
 import com.example.examplemod.common.items.tool.ItemShiro;
 import com.example.examplemod.init.ModItemGroups;
 import net.minecraft.block.Block;
@@ -26,5 +26,5 @@ public class ModRegister {
     //ITEM MASTER REGISTRY
     public static final RegistryObject<Item> DUST = ITEMS.register("dust", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HELLO_INVENTORY = ITEMS.register("hello_inventory", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro", () -> new ItemShiro(TierShiro.shiro, 120, 9.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro", () -> new ItemShiro(MasterTiers.shiro, 120, 9.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 }
