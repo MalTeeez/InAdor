@@ -1,7 +1,7 @@
 package com.example.examplemod.init;
 
 import com.example.examplemod.ExampleMod;
-import com.example.examplemod.ModRegister;
+import com.example.examplemod.util.ItemRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -30,6 +30,6 @@ public class ModItemGroups {
             return iconItem;
         }
     }
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(ModItemGroup.getItemFrom(ModRegister.HELLO_INVENTORY)));
+    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(ModItemGroup.getItemFrom(ItemRegister.HELLO_INVENTORY)));
 
 }

@@ -1,5 +1,7 @@
 package com.example.examplemod;
 
+import com.example.examplemod.util.BlockRegister;
+import com.example.examplemod.util.ItemRegister;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,8 +36,8 @@ public class ExampleMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
-        ModRegister.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        BlockRegister.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ItemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event)

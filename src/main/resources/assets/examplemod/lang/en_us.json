@@ -1,5 +1,8 @@
 {
   "item.examplemod.hello_inventory": "Hello Inventory!",
   "itemGroup.examplemod": "Example Mod",
-  "item.examplemod.shiro": "Shiro"
+  "item.examplemod.shiro": "Shiro",
+  "block.examplemod.leaf_pile": "Leaf Pile",
+  "block.examplemod.hello_blocks": "Hello Blocks!",
+  "block.examplemod.second_block": "2nd Block"
 }
