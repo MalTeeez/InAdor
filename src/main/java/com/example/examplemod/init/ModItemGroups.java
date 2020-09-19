@@ -5,10 +5,12 @@ import com.example.examplemod.ModRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
 public class ModItemGroups {
+
     public static class ModItemGroup extends ItemGroup {
 
         private final Supplier<ItemStack> iconSupplier;
@@ -22,6 +24,12 @@ public class ModItemGroups {
         public ItemStack createIcon() {
             return iconSupplier.get();
         }
+
+        public static Item getItemFrom(RegistryObject<Item> item) {
+            Item iconItem = item.get();
+            return iconItem;
+        }
     }
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)))); //Icon wont register anymore cuz MODITEMS Class is depreceated
+    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ExampleMod.MODID, () -> new ItemStack(ModItemGroup.getItemFrom(ModRegister.HELLO_INVENTORY)));
+
 }
