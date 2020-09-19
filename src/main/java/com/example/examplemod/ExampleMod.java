@@ -26,6 +26,7 @@ public class ExampleMod
     public static final String MODID = "examplemod";
     private static final Logger LOGGER = LogManager.getLogger();
 
+
     public ExampleMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
@@ -33,6 +34,8 @@ public class ExampleMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
+        ModRegister.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event)
