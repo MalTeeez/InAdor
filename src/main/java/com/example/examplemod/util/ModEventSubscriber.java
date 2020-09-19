@@ -1,4 +1,6 @@
+/*
 package com.example.examplemod.util;
+
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.common.items.tiers.TierShiro;
@@ -43,3 +45,4 @@ public class ModEventSubscriber {
     }
 
 }
+*/

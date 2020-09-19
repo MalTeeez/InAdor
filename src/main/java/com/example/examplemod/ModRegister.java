@@ -10,8 +10,6 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static com.example.examplemod.ExampleMod.MODID;
-
 @SuppressWarnings({"unused"})
 public class ModRegister {
 

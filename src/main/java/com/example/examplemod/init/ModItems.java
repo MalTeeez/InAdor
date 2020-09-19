@@ -9,6 +9,5 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModItems {
 
   //  public static final Item HELLO_INVENTORY = null;
- //   public static final Item SHIRO = null;
 }
  */
