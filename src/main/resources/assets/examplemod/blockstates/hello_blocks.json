@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": {"model": "examplemod:blocks/hello_blocks"}
+    "": [
+      { "model": "examplemod:block/hello_blocks" }
+    ]
   }
 }
