@@ -1,4 +1,5 @@
 {
   "item.examplemod.hello_inventory": "Hello Inventory!",
-  "itemGroup.examplemod": "Example Mod"
+  "itemGroup.examplemod": "Example Mod",
+  "item.examplemod.shiro": "Shiro"
 }
