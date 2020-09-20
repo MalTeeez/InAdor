@@ -12,6 +12,10 @@ public class ItemShiro extends SwordTool {
     public ItemShiro(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties p_i48460_4_) {
         super(tier, attackDamageIn, attackSpeedIn, p_i48460_4_);
         getProperties();
+        this.canRepair(true);
+    }
+
+    private void canRepair(boolean b) {
     }
 
     // particle on swing?

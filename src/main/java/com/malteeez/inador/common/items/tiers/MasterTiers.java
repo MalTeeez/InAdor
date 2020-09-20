@@ -1,17 +1,23 @@
 package com.malteeez.inador.common.items.tiers;
 
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraftforge.fml.RegistryObject;
 
 public class MasterTiers {
-    // TODO revamp this tier class
+
     /**
      * @see net.minecraft.item.ItemTier
      * @see net.minecraft.item.Items
      */
 
-    public static IItemTier shiro = makeTier(100000, 2,30,9.0F, 3, 14, null);
-    public static IItemTier sora = makeTier(100000, 2,30,9.0F, 3, 14, null);
+    // register ingredient itemstacks here! (if needed)
+
+    // item tiers!
+    public static IItemTier shiro = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY);
+    public static IItemTier sora = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY);
 
     /**
      *
@@ -65,5 +71,16 @@ public class MasterTiers {
             }
         };
         return tier;
+    }
+
+
+    private static Ingredient toIngredient(ItemStack stack) {
+       Ingredient i = Ingredient.fromStacks(stack);
+       return i;
+    }
+
+    private static Item getItemFrom(RegistryObject<Item> item) {
+        Item t = item.get();
+        return t;
     }
 }
