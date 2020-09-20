@@ -42,8 +42,7 @@ public class InAdor
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        LOGGER.info("InAdor reached preinit");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -54,15 +53,15 @@ public class InAdor
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("inador", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+       // InterModComms.sendTo("inador", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)
     {
         // some example code to receive and process InterModComms from other mods
-        LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m->m.getMessageSupplier().get()).
-                collect(Collectors.toList()));
+    //    LOGGER.info("Got IMC {}", event.getIMCStream().
+     //           map(m->m.getMessageSupplier().get()).
+      //          collect(Collectors.toList()));
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

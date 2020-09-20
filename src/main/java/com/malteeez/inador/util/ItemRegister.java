@@ -1,7 +1,6 @@
 package com.malteeez.inador.util;
 
 import com.malteeez.inador.InAdor;
-import com.malteeez.inador.util.BlockRegister;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
 import com.malteeez.inador.common.items.tool.ItemShiro;
 import com.malteeez.inador.init.ModItemGroups;
@@ -19,6 +18,7 @@ public class ItemRegister {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, _MODID);
 
     //ITEM MASTER REGISTRY
+    public static final RegistryObject<Item> TESTITEM = ITEMS.register("testitem", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> HELLO_INVENTORY = ITEMS.register("hello_inventory", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro", () -> new ItemShiro(MasterTiers.shiro, 120, 9.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 
