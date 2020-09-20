@@ -2,6 +2,8 @@
   "item.inador.hello_inventory": "Hello Inventory!",
   "itemGroup.inador": "In Ador",
   "item.inador.shiro": "Shiro",
+  "item.inador.ext_bre": "Breaker Blade",
+  "item.inador.ext_kat": "Katana",
   "block.inador.leaf_pile": "Leaf Pile",
   "block.inador.hello_blocks": "Hello Blocks!",
   "block.inador.smallscreen": "Smallscreen",
