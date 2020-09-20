@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"2": "inador:item/ext_bre_2",
-		"texture": "inador:item/ext_bre_1",
-		"particle": "inador:item/ext_bre_2"
+		"2": "inador:render/item/ext_bre_2",
+		"texture": "inador:render/item/ext_bre_1",
+		"particle": "inador:render/item/ext_bre_2"
 	},
 	"elements": [
 		{
