@@ -1,9 +1,12 @@
 package com.malteeez.inador.util;
 
 import com.malteeez.inador.InAdor;
+import com.malteeez.inador.common.armor.ArmorMaterials;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
 import com.malteeez.inador.common.items.tool.ItemShiro;
 import com.malteeez.inador.init.ModItemGroups;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -28,6 +31,19 @@ public class ItemRegister {
     public static final RegistryObject<Item> TESTITEM = ITEMS.register("testitem", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> HELLO_INVENTORY = ITEMS.register("hello_inventory", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro", () -> new ItemShiro(MasterTiers.shiro, 14, 4.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
+
+    //ARMOR ITEMS
+    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("cloth_helmet",
+            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.HEAD, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+
+    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("cloth_chestplate",
+            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+
+    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("cloth_leggings",
+            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+
+    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("cloth_boots",
+            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
     //BLOCKITEMS MASTER REGISTRY
     public static final RegistryObject<Item> SMALLSCREEN = ITEMS.register("smallscreen", () -> new BlockItem(BlockRegister.SMALLSCREEN.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));

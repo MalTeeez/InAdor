@@ -1,6 +1,6 @@
 package com.malteeez.inador.common.items.tiers;
 
-import com.malteeez.inador.common.data.Ability;
+import com.malteeez.inador.common.capabilities.Ability;
 import com.malteeez.inador.common.items.tool.FrostShard;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
