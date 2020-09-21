@@ -8,14 +8,19 @@ import net.minecraft.item.IItemTier;
 
 public class PlsRenameIceSword extends SwordTool implements IAbility {
 
-    protected Ability ice = new Ability(0);
+    protected static Ability ice = new Ability(0);
 
     public PlsRenameIceSword(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties p_i48460_4_) {
         super(tier, attackDamageIn, attackSpeedIn, p_i48460_4_);
     }
 
-   @Override
+    @Override
     public Ability hasAbility() {
+        return ice;
+    }
+
+    // for public access
+    public static Ability getAbility() {
         return ice;
     }
 }

@@ -1,6 +1,7 @@
 package com.malteeez.inador.common.items.tiers;
 
 import com.malteeez.inador.common.data.Ability;
+import com.malteeez.inador.common.items.tool.PlsRenameIceSword;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,7 +20,8 @@ public class MasterTiers {
     // item tiers!
     public static IItemTier shiro = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY, Ability.NONE);
     public static IItemTier sora = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY, Ability.NONE);
-
+    // change as needed please
+    public static IItemTier iceSword = makeTier(1000, 0, 9, 4.0F, 0, 14, Ingredient.EMPTY, PlsRenameIceSword.getAbility());
     /**
      *
      * @param max - max uses
