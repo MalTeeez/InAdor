@@ -1,5 +1,6 @@
 package com.malteeez.inador.common.items.tiers;
 
+import com.malteeez.inador.common.data.Ability;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,8 +17,8 @@ public class MasterTiers {
     // register ingredient itemstacks here! (if needed)
 
     // item tiers!
-    public static IItemTier shiro = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY);
-    public static IItemTier sora = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY);
+    public static IItemTier shiro = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY, Ability.NONE);
+    public static IItemTier sora = makeTier(100000, 2,30,9.0F, 3, 14, Ingredient.EMPTY, Ability.NONE);
 
     /**
      *
@@ -33,7 +34,7 @@ public class MasterTiers {
      */
 
 
-    private static IItemTier makeTier(int max, float eff, float aD, float aS, int harvest, int ench, Ingredient mat) {
+    private static IItemTier makeTier(int max, float eff, float aD, float aS, int harvest, int ench, Ingredient mat, Ability ability) {
         IItemTier tier = new IItemTier() {
 
             @Override
@@ -68,6 +69,10 @@ public class MasterTiers {
             @Override
             public Ingredient getRepairMaterial() {
                 return mat;
+            }
+
+            public Ability getAbility() {
+                return ability;
             }
         };
         return tier;
