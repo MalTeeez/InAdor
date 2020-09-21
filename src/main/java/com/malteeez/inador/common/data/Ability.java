@@ -4,9 +4,9 @@ import javax.annotation.Nonnull;
 
 public class Ability {
 
-    protected byte type;
-    private static byte ICE = 0;
-    private static byte FIRE = 1;
+    protected int type;
+    private static int ICE = 0;
+    private static int FIRE = 1;
 
     public static Ability NONE = new Ability();
 
@@ -22,7 +22,7 @@ public class Ability {
      */
 
     @Nonnull
-    public Ability(byte type) {
+    public Ability(int type) {
         this.type = type;
         getType();
     }
