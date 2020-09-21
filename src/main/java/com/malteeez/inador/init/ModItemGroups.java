@@ -2,10 +2,8 @@ package com.malteeez.inador.init;
 
 import com.malteeez.inador.InAdor;
 import com.malteeez.inador.util.ItemRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
@@ -25,11 +23,7 @@ public class ModItemGroups {
             return iconSupplier.get();
         }
 
-        public static Item getItemFrom(RegistryObject<Item> item) {
-            Item iconItem = item.get();
-            return iconItem;
-        }
     }
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(InAdor.MODID, () -> new ItemStack(ModItemGroup.getItemFrom(ItemRegister.HELLO_INVENTORY)));
+    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(InAdor.MODID, () -> new ItemStack(ItemRegister.HELLO_INVENTORY.get()));
 
 }
