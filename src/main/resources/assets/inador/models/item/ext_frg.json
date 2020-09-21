@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"2": "inador:render/item/ext_frg_2",
-		"texture": "inador:render/item/ext_frg_1",
 		"particle": "inador:render/item/ext_frg_2",
+		"texture": "inador:render/item/ext_frg_1",
 		"fragmentanimation1": "inador:render/sfx/spark2_fx"
 	},
 	"elements": [
@@ -1965,14 +1965,34 @@
 			"rotation": [0, 95, 0],
 			"translation": [0, 8.13, -0.38]
 		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 95, 0],
+			"translation": [0, 8.13, 0.87]
+		},
 		"firstperson_righthand": {
-			"rotation": [-1, 111, 0],
-			"translation": [3.02, 3.59, -7.94]
+			"rotation": [-1, 85, 0],
+			"translation": [2.25, 2.75, -7.25],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-1, -85, 0],
+			"translation": [2.25, 2.75, -7.25],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"ground": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -2.25, 0]
 		},
 		"gui": {
-			"rotation": [0, 0, -45],
-			"translation": [0.94, -1.13, 0],
+			"rotation": [0, -180, -45],
+			"translation": [-0.81, -1.13, 0],
 			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"translation": [0, 0, -5]
+		},
+		"fixed": {
+			"translation": [0, 0, -1.25]
 		}
 	},
 	"groups": [0,
