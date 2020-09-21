@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "inador:cloth"
+    }
+  },
+  "result":
+  {
+    "item": "inador:cloth_leggings",
+    "count": 1
+  }
+}
