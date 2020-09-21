@@ -1,4 +1,4 @@
-package com.malteeez.inador.common.data;
+package com.malteeez.inador.common.capabilities;
 
 import javax.annotation.Nonnull;
 
@@ -11,7 +11,6 @@ public class Ability {
     public static Ability NONE = new Ability();
 
     public Ability() {
-
     }
 
     /**

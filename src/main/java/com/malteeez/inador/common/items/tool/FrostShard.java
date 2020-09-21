@@ -1,7 +1,7 @@
 package com.malteeez.inador.common.items.tool;
 
 import com.malteeez.inador.api.IAbility;
-import com.malteeez.inador.common.data.Ability;
+import com.malteeez.inador.common.capabilities.Ability;
 import com.malteeez.inador.common.items.tool.lib.SwordTool;
 
 import net.minecraft.item.IItemTier;
