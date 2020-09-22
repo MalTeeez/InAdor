@@ -3,6 +3,7 @@ package com.malteeez.inador.util;
 import com.malteeez.inador.InAdor;
 import com.malteeez.inador.common.armor.ArmorMaterials;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
+import com.malteeez.inador.common.items.tool.FrostShard;
 import com.malteeez.inador.common.items.tool.ItemShiro;
 import com.malteeez.inador.init.ModItemGroups;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -24,7 +25,7 @@ public class ItemRegister {
     public static final RegistryObject<Item> EXT_STR = ITEMS.register("ext_str", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> CLOTH = ITEMS.register("cloth", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> EXT_RUT = ITEMS.register("ext_rut", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<Item> EXT_ICE = ITEMS.register("ext_ice", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> FROST_SHARD = ITEMS.register("frost_shard", () -> new FrostShard(MasterTiers.iceSword, 16, 5.0F, FrostShard.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> EXT_FRG = ITEMS.register("ext_frg", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> EXT_GEM = ITEMS.register("ext_gem", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> EXT_BRE = ITEMS.register("ext_bre", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
