@@ -22,6 +22,8 @@ public class ItemRegister {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, _MODID);
 
     //ITEM MASTER REGISTRY
+    public static final RegistryObject<Item> TIER_SHIRO_INGOT = ITEMS.register("tier_shiro_ingot", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> TURQUOISE_GEM = ITEMS.register("turquoise_gem", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> EXT_STR = ITEMS.register("ext_str", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> CLOTH = ITEMS.register("cloth", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> EXT_RUT = ITEMS.register("ext_rut", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
@@ -49,7 +51,7 @@ public class ItemRegister {
             () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
     //BLOCKITEMS MASTER REGISTRY
-    public static final RegistryObject<Item> WISTERIA_SAPLING = ITEMS.register("wisteria_sapling", () -> new BlockItem(BlockRegister.WISTERIA_SAPLING.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+    //public static final RegistryObject<Item> WISTERIA_SAPLING = ITEMS.register("wisteria_sapling", () -> new BlockItem(BlockRegister.WISTERIA_SAPLING.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> TURQUOISE_ORE = ITEMS.register("turquoise_ore", () -> new BlockItem(BlockRegister.TURQUOISE_ORE.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> SMALLSCREEN = ITEMS.register("smallscreen", () -> new BlockItem(BlockRegister.SMALLSCREEN.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> LEAF_PILE = ITEMS.register("leaf_pile", () -> new BlockItem(BlockRegister.LEAF_PILE.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
