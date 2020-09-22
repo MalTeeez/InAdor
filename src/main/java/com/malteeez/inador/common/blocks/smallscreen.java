@@ -18,7 +18,7 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.stream.Stream;
 
-public class smallscreen extends Block {
+public class Smallscreen extends Block {
 
         private static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
@@ -46,11 +46,11 @@ public class smallscreen extends Block {
                 Block.makeCuboidShape(7, 3, 4, 8, 9, 12)
         ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
-        public smallscreen() {
+        public Smallscreen() {
             super(Block.Properties.create(Material.PISTON)
                     .hardnessAndResistance(3.5F, 4.0F)
                     .sound(SoundType.STONE)
-                    .harvestLevel(0)
+                    .harvestLevel(1)
                     .harvestTool(ToolType.PICKAXE));
         }
 

@@ -48,8 +48,9 @@ public class ItemRegister {
             () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
     //BLOCKITEMS MASTER REGISTRY
+    public static final RegistryObject<Item> WISTERIA_SAPLING = ITEMS.register("wisteria_sapling", () -> new BlockItem(BlockRegister.WISTERIA_SAPLING.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> TURQUOISE_ORE = ITEMS.register("turquoise_ore", () -> new BlockItem(BlockRegister.TURQUOISE_ORE.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> SMALLSCREEN = ITEMS.register("smallscreen", () -> new BlockItem(BlockRegister.SMALLSCREEN.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> LEAF_PILE = ITEMS.register("leaf_pile", () -> new BlockItem(BlockRegister.LEAF_PILE.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<Item> HELLO_BLOCKS = ITEMS.register("hello_blocks", () -> new BlockItem(BlockRegister.HELLO_BLOCKS.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> second_block = ITEMS.register("second_block", () -> new BlockItem(BlockRegister.SECOND_BLOCK.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 }
