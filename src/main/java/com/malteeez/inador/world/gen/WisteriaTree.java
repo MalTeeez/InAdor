@@ -1,6 +1,8 @@
+
 package com.malteeez.inador.world.gen;
 
 import com.malteeez.inador.util.BlockRegister;
+import com.malteeez.inador.world.util.TreeGen;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
@@ -13,7 +15,7 @@ import net.minecraftforge.common.IPlantable;
 import java.util.Random;
 
 public class WisteriaTree extends Tree {
-    public static final BaseTreeFeatureConfig JAZZ_TREE_CONFIG = (new BaseTreeFeatureConfig(
+    public static final BaseTreeFeatureConfig WISTERIA_TREE_CONFIG = (new TreeGen(
             new SimpleBlockStateProvider(BlockRegister.WISTERIA_LOG.get().getDefaultState()),
             new SimpleBlockStateProvider(BlockRegister.WISTERIA_LEAVES.get().getDefaultState()),
             new BlobFoliagePlacer(40, 1,150,5,5))
@@ -21,6 +23,8 @@ public class WisteriaTree extends Tree {
 
     @Override
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean b) {
-        return Feature.field_236291_c_.withConfiguration(JAZZ_TREE_CONFIG);
+        return Feature.field_236291_c_.withConfiguration(WISTERIA_TREE_CONFIG);
     }
 }
+
+
