@@ -16,7 +16,18 @@ public class MasterTiers {
      */
 
     // register ingredient itemstacks here! (if needed)
-
+    /*
+    ---Tier Names---
+    kura
+    zoki
+    luri
+    nosu
+    fero
+    hina
+    koza
+    shiro
+    tiro
+     */
     // item tiers!
     public static IItemTier shiro = makeTier(100000, 2,14,4.0F, 3, 14, Ingredient.EMPTY, Ability.NONE);
     public static IItemTier sora = makeTier(100000, 2,14,4.0F, 3, 14, Ingredient.EMPTY, Ability.NONE);
