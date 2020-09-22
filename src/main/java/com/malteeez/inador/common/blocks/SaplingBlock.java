@@ -14,6 +14,7 @@ import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -49,11 +50,12 @@ public class SaplingBlock extends BushBlock implements IGrowable {
 
     public void grow(ServerWorld serverWorld, BlockPos pos, BlockState state, Random rand) {
         if (state.get(STAGE) == 0) {
-            serverWorld.setBlockState(pos, state.cycle(STAGE), 4);
+
+            serverWorld.setBlockState(pos, state.getBlockState(), 4);
         } else {
             if (!ForgeEventFactory.saplingGrowTree(serverWorld, rand, pos))
                 return;
-            this.tree.get().place(serverWorld, serverWorld.getChunkProvider().getChunkGenerator(), pos, state,
+            this.tree.get().func_230339_a_(serverWorld, serverWorld.getChunkProvider().getChunkGenerator(), pos, state,
                     rand);
         }
     }
