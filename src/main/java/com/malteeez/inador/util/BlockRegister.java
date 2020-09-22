@@ -19,8 +19,9 @@ public class BlockRegister {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, _MODID);
 
     //BLOCK MASTER REGISTRY
-    // public static final RegistryObject<Block> WISTERIA_LEAVES = BLOCKS.register("wisteria_leaves", () -> new Block(Block.Properties.from(Blocks.BIRCH_LEAVES)));
-    // public static final RegistryObject<Block> WISTERIA_LOG = BLOCKS.register("wisteria_log", () -> new Block(Block.Properties.from(Blocks.BIRCH_LOG)));
+   // public static final RegistryObject<Block> WISTERIA_PLANKS = BLOCKS.register("wisteria_planks", () -> new Block(Block.Properties.from(Blocks.BIRCH_PLANKS)));
+   // public static final RegistryObject<Block> WISTERIA_LEAVES = BLOCKS.register("wisteria_leaves", () -> new Block(Block.Properties.from(Blocks.BIRCH_LEAVES)));
+   // public static final RegistryObject<Block> WISTERIA_LOG = BLOCKS.register("wisteria_log", () -> new Block(Block.Properties.from(Blocks.BIRCH_LOG)));
     // public static final RegistryObject<Block> WISTERIA_SAPLING = BLOCKS.register("wisteria_sapling", () -> new WisteriaTreeSapling(new WisteriaTree(), WisteriaTreeSapling.properties));
     public static final RegistryObject<Block> TURQUOISE_ORE = BLOCKS.register("turquoise_ore", TurquoiseOre::new);
     public static final RegistryObject<Block> SMALLSCREEN = BLOCKS.register("smallscreen", Smallscreen::new);

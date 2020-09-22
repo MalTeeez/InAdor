@@ -1,12 +1,12 @@
 {
 "animation": {
-"width": 50,
-"height": 30,
+"width": 32,
+"height": 32,
 "frametime": 2,
 "frames": [
 {
 "index": 6,
-"time": 200
+"time": 20
 },
 0,
 1,
