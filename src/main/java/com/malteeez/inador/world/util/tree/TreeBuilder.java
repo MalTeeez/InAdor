@@ -1,4 +1,4 @@
-package com.malteeez.inador.world.util;
+package com.malteeez.inador.world.util.tree;
 
 import net.minecraft.world.gen.blockstateprovider.BlockStateProvider;
 import net.minecraft.world.gen.feature.AbstractFeatureSizeType;

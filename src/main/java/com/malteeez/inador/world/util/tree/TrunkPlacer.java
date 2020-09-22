@@ -1,4 +1,4 @@
-package com.malteeez.inador.world.util;
+package com.malteeez.inador.world.util.tree;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-public class TruncPlacer extends AbstractTrunkPlacer {
-    public TruncPlacer(int p_i232060_1_, int p_i232060_2_, int p_i232060_3_) {
+public class TrunkPlacer extends AbstractTrunkPlacer {
+    public TrunkPlacer(int p_i232060_1_, int p_i232060_2_, int p_i232060_3_) {
         super(p_i232060_1_, p_i232060_2_, p_i232060_3_);
     }
 
