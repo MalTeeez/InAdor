@@ -18,7 +18,7 @@ public enum ArmorMaterials implements IArmorMaterial {
     CLOTH(InAdor.MODID + ":cloth", 11, new int[] { 1, 2, 3, 1 }, 9,
     SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0, () -> { return Ingredient.fromItems(ItemRegister.CLOTH.get()); },0);
 
-    private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 }; //[Helmet,Chestplate,Leggings,Boots] this*maxDamageFactor = Durability - Base values here are vanilla so seem ok
+    private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 }; //[Boots, Leggings, Chestplate, Helmet] this*maxDamageFactor = Durability - Base values here are vanilla so seem ok
     private final String name;
     private final int maxDamageFactor; //Durability Scale factor, Iron=15, Diamond=33, Gold=7, Leather=5
     private final int[] damageReductionAmount; //Armor Bar Protection, 1 = 1/2 armor bar - [Helmet,Leggings,Chestplate,Boots]

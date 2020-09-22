@@ -47,7 +47,6 @@ public class MasterTiers {
      *
      */
 
-
     private static IItemTier makeTier(int max, float eff, float aD, float aS, int harvest, int ench, Ingredient mat, Ability ability) {
         IItemTier tier = new IItemTier() {
 
