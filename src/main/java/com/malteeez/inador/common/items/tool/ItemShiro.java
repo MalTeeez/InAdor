@@ -19,28 +19,8 @@ public class ItemShiro extends SwordTool {
     }
 
     // particle on swing?
-    private static Properties getProperties(){
+    private static SwordItem.Properties getProperties(){
         return properties;
     }
-
-    /* todo BELLA: finish constr versions and regis
-        also, make sure it works, textures, etc
-     */
-
-   /**
-    * deal with later!
-    public ItemShiro(Properties properties) {
-        super(properties);
-
-    }
-    */
-/*
-    public ItemShiro(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties p_i48460_4_) {
-        super(tier, attackDamageIn, attackSpeedIn, p_i48460_4_);
-        this.setRegistryName("Shiro");
-    }
-
- */
-
 
 }

@@ -1,6 +1,6 @@
 package com.malteeez.inador.common.capabilities;
 
-import com.malteeez.inador.api.IIceAbility;
+import com.malteeez.inador.api.ability.IIceAbility;
 import com.malteeez.inador.api.NBT;
 
 import net.minecraft.util.Direction;

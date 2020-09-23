@@ -5,6 +5,7 @@ import com.malteeez.inador.common.armor.ArmorMaterials;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
 import com.malteeez.inador.common.items.tool.FrostShard;
 import com.malteeez.inador.common.items.tool.ItemShiro;
+import com.malteeez.inador.common.items.tool.lib.SwordTool;
 import com.malteeez.inador.init.ModItemGroups;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -33,8 +34,7 @@ public class ItemRegister {
             //TIER SHIRO----------------------------
                  public static final RegistryObject<Item> TIER_SHIRO_INGOT = ITEMS.register("tier_shiro_ingot", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                  public static final RegistryObject<Item> TIER_SHIRO_GADGET = ITEMS.register("tier_shiro_gadget", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-                 public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro",
-                    () -> new ItemShiro(MasterTiers.shiro, 14, 4.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
+                 public static final RegistryObject<Item> SHIRO = ITEMS.register("shiro", () -> new ItemShiro(MasterTiers.shiro, 14, 4.0F, ItemShiro.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
             //TIER TIRO---------------------------------
                 public static final RegistryObject<Item> TIER_TIRO_INGOT = ITEMS.register("tier_tiro_ingot", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> TIER_TIRO_GADGET = ITEMS.register("tier_tiro_gadget", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));

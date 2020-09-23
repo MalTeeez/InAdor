@@ -1,4 +1,4 @@
-package com.malteeez.inador.api;
+package com.malteeez.inador.api.ability;
 
 public interface IAbility {
 
