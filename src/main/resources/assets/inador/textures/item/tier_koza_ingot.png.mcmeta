@@ -1,8 +1,6 @@
 {
 "animation": {
-"width": 30,
-"height": 32,
-"frametime": 2,
+"frametime": 8,
 "frames": [
 {
 "index": 5,

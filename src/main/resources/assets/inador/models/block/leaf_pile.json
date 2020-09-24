@@ -1173,57 +1173,6 @@
 				"up": {"uv": [0, 0, 14, 14], "texture": "#0"},
 				"down": {"uv": [0, 0, 14, 14], "texture": "#0"}
 			}
-		},
-		{
-			"from": [0, 0, 0],
-			"to": [16, 0, 1],
-			"rotation": {"angle": 0, "axis": "y", "origin": [23, 8, 8]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 0], "texture": "#1"},
-				"east": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"south": {"uv": [0, 0, 16, 0], "texture": "#1"},
-				"west": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 1], "texture": "#1"},
-				"down": {"uv": [0, 0, 16, 1], "texture": "#1"}
-			}
-		},
-		{
-			"from": [0, 0, 15],
-			"to": [16, 0, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [23, 8, 23]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 0], "texture": "#1"},
-				"east": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"south": {"uv": [0, 0, 16, 0], "texture": "#1"},
-				"west": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 1], "texture": "#1"},
-				"down": {"uv": [0, 0, 16, 1], "texture": "#1"}
-			}
-		},
-		{
-			"from": [15, 0, 1],
-			"to": [16, 0, 15],
-			"rotation": {"angle": 0, "axis": "y", "origin": [23, 8, 8]},
-			"faces": {
-				"north": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"east": {"uv": [0, 0, 14, 0], "texture": "#1"},
-				"south": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"west": {"uv": [0, 0, 14, 0], "texture": "#1"},
-				"up": {"uv": [0, 0, 1, 14], "texture": "#1"},
-				"down": {"uv": [0, 0, 1, 14], "texture": "#1"}
-			}
-		},
-		{
-			"from": [0, 0, 1],
-			"to": [1, 0, 15],
-			"faces": {
-				"north": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"east": {"uv": [0, 0, 14, 0], "texture": "#1"},
-				"south": {"uv": [0, 0, 1, 0], "texture": "#1"},
-				"west": {"uv": [0, 0, 14, 0], "texture": "#1"},
-				"up": {"uv": [0, 0, 1, 14], "texture": "#1"},
-				"down": {"uv": [0, 0, 1, 14], "texture": "#1"}
-			}
 		}
 	],
 	"groups": [
@@ -1236,5 +1185,6 @@
 			"name": "block",
 			"origin": [9, 8, 9],
 			"children": [84, 85, 86, 87, 88, 89]
-		}, 90, 91, 92, 93]
+		}
+	]
 }

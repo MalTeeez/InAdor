@@ -13,7 +13,7 @@ public class TurquoiseOre extends OreBlock {
 
     public TurquoiseOre() {
         super(Block.Properties.create(Material.ROCK)
-                .hardnessAndResistance(3.5f, 4.0f)
+                .hardnessAndResistance(3.5f, 3.0f)
                 .sound(SoundType.STONE)
                 .harvestLevel(1)
                 .harvestTool(ToolType.PICKAXE));

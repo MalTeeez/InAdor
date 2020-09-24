@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "inador_turquoise_gem"
+              "name": "inador:turquoise_gem"
             }
           ]
         }
