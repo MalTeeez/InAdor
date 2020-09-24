@@ -26,5 +26,5 @@ public class BlockRegister {
     public static final RegistryObject<Block> TURQUOISE_ORE = BLOCKS.register("turquoise_ore", TurquoiseOre::new);
     public static final RegistryObject<Block> SMALLSCREEN = BLOCKS.register("smallscreen", Smallscreen::new);
     public static final RegistryObject<Block> LEAF_PILE = BLOCKS.register("leaf_pile", () -> new Leafpile(Leafpile.PROPERTIES));
-    public static final RegistryObject<Block> SECOND_BLOCK = BLOCKS.register("second_block", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.0F, 1.0F).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> SECOND_BLOCK = BLOCKS.register("second_block", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(7.5F, 7.0F).harvestTool(ToolType.PICKAXE)));
 }
