@@ -42,7 +42,7 @@ public class ItemRegister {
     //OTHER WEAPONS----------------------------
             public static final RegistryObject<Item> EXT_STR = ITEMS.register("ext_str", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
             public static final RegistryObject<Item> EXT_RUT = ITEMS.register("ext_rut", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-            public static final RegistryObject<Item> FROST_SHARD = ITEMS.register("frost_shard", () -> new FrostShard(MasterTiers.iceSword, 16, 5.0F, FrostShard.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
+            public static final RegistryObject<Item> FROST_SHARD = ITEMS.register("frost_shard", () -> new FrostShard(MasterTiers.iceSword, 8, 5.0F, FrostShard.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
             public static final RegistryObject<Item> EXT_FRG = ITEMS.register("ext_frg", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
             public static final RegistryObject<Item> EXT_GEM = ITEMS.register("ext_gem", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
             public static final RegistryObject<Item> BREAKER_BLADE = ITEMS.register("breaker_blade", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
