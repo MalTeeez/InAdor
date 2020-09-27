@@ -6,11 +6,10 @@ import com.malteeez.inador.common.items.tool.lib.SwordTool;
 import com.malteeez.inador.init.ModItemGroups;
 
 
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 
 public class FrostShard extends SwordTool implements IAbility {
-
-
 
 
     public static SwordItem.Properties properties = setProperties(200, Rarity.EPIC, ModItemGroups.MOD_ITEM_GROUP);
