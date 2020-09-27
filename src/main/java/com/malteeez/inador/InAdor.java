@@ -1,7 +1,7 @@
 package com.malteeez.inador;
 
-import com.malteeez.inador.common.items.tool.FrostShard;
 import com.malteeez.inador.util.BlockRegister;
+import com.malteeez.inador.util.EventHandler;
 import com.malteeez.inador.util.ItemRegister;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,7 +33,7 @@ public class InAdor
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(FrostShard.class);
+        MinecraftForge.EVENT_BUS.register(EventHandler.class);
         BlockRegister.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ItemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
