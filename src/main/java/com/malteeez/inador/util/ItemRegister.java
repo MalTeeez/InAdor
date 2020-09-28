@@ -2,6 +2,7 @@ package com.malteeez.inador.util;
 
 import com.malteeez.inador.InAdor;
 import com.malteeez.inador.common.armor.ArmorMaterials;
+import com.malteeez.inador.common.armor.type.Cloth;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
 import com.malteeez.inador.common.items.tool.FrostShard;
 import com.malteeez.inador.common.items.tool.ItemShiro;
@@ -55,16 +56,16 @@ public class ItemRegister {
 
     //ARMOR ITEMS
     public static final RegistryObject<ArmorItem> CLOTH_HELMET = ITEMS.register("cloth_helmet",
-            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.HEAD, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+            () -> new Cloth.Helmet(ArmorMaterials.CLOTH, EquipmentSlotType.HEAD, Cloth.Helmet.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 
     public static final RegistryObject<ArmorItem> CLOTH_CHESTPLATE = ITEMS.register("cloth_chestplate",
-            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+            () -> new Cloth.Chestplate(ArmorMaterials.CLOTH, EquipmentSlotType.CHEST, Cloth.Chestplate.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 
     public static final RegistryObject<ArmorItem> CLOTH_LEGGINGS = ITEMS.register("cloth_leggings",
-            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+            () -> new Cloth.Leggings(ArmorMaterials.CLOTH, EquipmentSlotType.LEGS, Cloth.Leggings.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 
     public static final RegistryObject<ArmorItem> CLOTH_BOOTS = ITEMS.register("cloth_boots",
-            () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+            () -> new Cloth.Boots(ArmorMaterials.CLOTH, EquipmentSlotType.FEET, Cloth.Boots.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 
     //BLOCKITEMS MASTER REGISTRY
      //   public static final RegistryObject<Item> WISTERIA_PLANKS = ITEMS.register("wisteria_planks", () -> new BlockItem(BlockRegister.WISTERIA_PLANKS.get(), new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
