@@ -1,5 +1,6 @@
 package com.malteeez.inador;
 
+import com.malteeez.inador.util.SoundRegister;
 import com.malteeez.inador.util.BlockRegister;
 import com.malteeez.inador.util.EventHandler;
 import com.malteeez.inador.util.ItemRegister;
@@ -34,6 +35,7 @@ public class InAdor
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(EventHandler.class);
+        SoundRegister.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BlockRegister.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ItemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }

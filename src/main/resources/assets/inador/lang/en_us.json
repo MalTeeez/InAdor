@@ -15,5 +15,7 @@
   "item.inador.cloth_helmet": "Cloth Hood",
   "item.inador.cloth_chestplate": "Cloth Robe",
   "item.inador.cloth_leggings": "Cloth Leggings",
-  "item.inador.cloth_boots": "Cloth Boots"
+  "item.inador.cloth_boots": "Cloth Boots",
+  "frost_shard.spawn": "Frost Shard Block Spawn Sound",
+  "frost_shard.spawn.sub": "Frost Shard spawns"
 }

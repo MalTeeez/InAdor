@@ -1,0 +1,12 @@
+{
+  "frost_shard.spawn": {
+    "category": "frost_shard.spawn",
+    "subtitle": "frost_shard.spawn.sub",
+    "sounds": [
+        {
+          "name": "inador:frost_shard/spawn",
+          "stream": true
+        }
+      ]
+    }
+}
