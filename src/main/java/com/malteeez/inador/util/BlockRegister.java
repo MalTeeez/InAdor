@@ -5,9 +5,8 @@ import com.malteeez.inador.common.blocks.*;
 // import com.malteeez.inador.common.blocks.SaplingBlock;
 // import com.malteeez.inador.world.util.tree.wisteria.WisteriaTree;
 // import com.malteeez.inador.world.util.tree.wisteria.WisteriaTreeSapling;
-import com.malteeez.inador.common.blocks.special.FrostShardBlock;
+import com.malteeez.inador.common.blocks.FrostShardTop;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -29,6 +28,6 @@ public class BlockRegister {
     public static final RegistryObject<Block> SMALLSCREEN = BLOCKS.register("smallscreen", Smallscreen::new);
     public static final RegistryObject<Block> LEAF_PILE = BLOCKS.register("leaf_pile", () -> new Leafpile(Leafpile.PROPERTIES));
     public static final RegistryObject<Block> SECOND_BLOCK = BLOCKS.register("second_block", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(7.5F, 7.0F).harvestTool(ToolType.PICKAXE)));
-    public static final RegistryObject<Block> FROST_SHARD_BLOCK = BLOCKS.register("ice_spike_top", () -> new FrostShardBlock(FrostShardBlock.Properties.create(Material.ICE).sound(SoundType.GLASS)));
-    public static final RegistryObject<Block> FROST_SHARD_BLOCK_2 = BLOCKS.register("ice_spike_bottom", () -> new FrostShardBottom(FrostShardBlock.Properties.create(Material.ICE).sound(SoundType.GLASS)));
+    public static final RegistryObject<Block> FROST_SHARD_BLOCK = BLOCKS.register("ice_spike_top", () -> new FrostShardTop(FrostShardTop.Properties.create(Material.ICE).sound(SoundType.GLASS)));
+    public static final RegistryObject<Block> FROST_SHARD_BLOCK_2 = BLOCKS.register("ice_spike_bottom", () -> new FrostShardBottom(FrostShardTop.Properties.create(Material.ICE).sound(SoundType.GLASS)));
 }

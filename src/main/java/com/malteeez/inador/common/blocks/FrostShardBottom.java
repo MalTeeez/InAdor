@@ -19,8 +19,9 @@ public class FrostShardBottom extends FrostedIceBlock {
         super(properties);
     }
 
-     private static final VoxelShape SHAPE =
-             Block.makeCuboidShape(4, 0, 4.5, 12.5, 15.5, 12.5);
+     private static final VoxelShape SHAPE = Stream.of(
+             Block.makeCuboidShape(4, 0, 4.5, 12.5, 15.5, 12.5)
+                ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
      @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

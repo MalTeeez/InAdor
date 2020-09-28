@@ -27,7 +27,8 @@ public class ItemRegister {
             //TIER KOZA------------------------------
                 public static final RegistryObject<Item> TIER_KOZA_INGOT = ITEMS.register("tier_koza_ingot", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> TIER_KOZA_GADGET = ITEMS.register("tier_koza_gadget", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-                public static final RegistryObject<Item> TIER_KOZA_SCARF = ITEMS.register("tier_koza_scarf", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+                public static final RegistryObject<ArmorItem> TIER_KOZA_SCARF = ITEMS.register("tier_koza_scarf",
+                     () -> new ArmorItem(ArmorMaterials.SCARF_1, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
             //TIER KURA---------------------------
                 public static final RegistryObject<Item> TIER_KURA_INGOT = ITEMS.register("tier_kura_ingot", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> TIER_KURA_GADGET = ITEMS.register("tier_kura_gadget", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));

@@ -16,7 +16,10 @@ public enum ArmorMaterials implements IArmorMaterial {
 
     //ARMOR MATERIAL MASTER REGISTER
     CLOTH(InAdor.MODID + ":cloth", 11, new int[] { 1, 2, 3, 1 }, 9,
-    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0, () -> { return Ingredient.fromItems(ItemRegister.CLOTH.get()); },0);
+    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0, () -> { return Ingredient.fromItems(ItemRegister.CLOTH.get()); },0),
+
+    SCARF_1(InAdor.MODID + ":scarf_1", 15, new int[] { 4, 0, 0, 0 }, 23,
+    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.2f, () -> { return Ingredient.fromItems(ItemRegister.TIER_KOZA_INGOT.get()); },0);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 }; //[Boots, Leggings, Chestplate, Helmet] this*maxDamageFactor = Durability - Base values here are vanilla so seem ok
     private final String name;
