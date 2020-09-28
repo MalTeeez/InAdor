@@ -8,6 +8,7 @@ import com.malteeez.inador.common.blocks.*;
 import com.malteeez.inador.common.blocks.special.FrostShardBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
@@ -28,5 +29,5 @@ public class BlockRegister {
     public static final RegistryObject<Block> SMALLSCREEN = BLOCKS.register("smallscreen", Smallscreen::new);
     public static final RegistryObject<Block> LEAF_PILE = BLOCKS.register("leaf_pile", () -> new Leafpile(Leafpile.PROPERTIES));
     public static final RegistryObject<Block> SECOND_BLOCK = BLOCKS.register("second_block", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(7.5F, 7.0F).harvestTool(ToolType.PICKAXE)));
-    public static final RegistryObject<Block> FROST_SHARD_BLOCK = BLOCKS.register("ice_spike", () -> new FrostShardBlock(FrostShardBlock.Properties.create(Material.ICE)));
+    public static final RegistryObject<Block> FROST_SHARD_BLOCK = BLOCKS.register("ice_spike", () -> new FrostShardBlock(FrostShardBlock.Properties.create(Material.ICE).sound(SoundType.GLASS)));
 }

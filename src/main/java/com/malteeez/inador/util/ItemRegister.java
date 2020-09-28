@@ -54,16 +54,16 @@ public class ItemRegister {
             public static final RegistryObject<Item> HELLO_INVENTORY = ITEMS.register("hello_inventory", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
     //ARMOR ITEMS
-    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("cloth_helmet",
+    public static final RegistryObject<ArmorItem> CLOTH_HELMET = ITEMS.register("cloth_helmet",
             () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.HEAD, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
-    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("cloth_chestplate",
+    public static final RegistryObject<ArmorItem> CLOTH_CHESTPLATE = ITEMS.register("cloth_chestplate",
             () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.CHEST, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
-    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("cloth_leggings",
+    public static final RegistryObject<ArmorItem> CLOTH_LEGGINGS = ITEMS.register("cloth_leggings",
             () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.LEGS, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
-    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("cloth_boots",
+    public static final RegistryObject<ArmorItem> CLOTH_BOOTS = ITEMS.register("cloth_boots",
             () -> new ArmorItem(ArmorMaterials.CLOTH, EquipmentSlotType.FEET, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
 
     //BLOCKITEMS MASTER REGISTRY
