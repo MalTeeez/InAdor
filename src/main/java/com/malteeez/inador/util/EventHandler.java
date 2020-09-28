@@ -3,15 +3,20 @@ package com.malteeez.inador.util;
 import com.malteeez.inador.InAdor;
 import com.malteeez.inador.common.items.tool.FrostShard;
 
+import com.malteeez.inador.common.items.tool.ItemShiro;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.datafix.fixes.PotionItems;
@@ -62,9 +67,9 @@ public class EventHandler {
                     int rand = (int) (1 + Math.random() * 12);
 
                     if ((rand / 3) > 2) {
-                        double x = target.lastTickPosX;
-                        double y = target.lastTickPosY;
-                        double z = target.lastTickPosZ;
+                        double x = target.getPosX();
+                        double y = target.getPosY();
+                        double z = target.getPosZ();
 
                         logger.info("FROST_SHARD: placing Ice block @ " + x + ", " + y + ", " + z + ".");
                         logger.info("FROST_SHARD: placing Ice block @ " + x + ", " + (y + 1) + ", " + z + ".");
@@ -92,8 +97,33 @@ public class EventHandler {
                             Block.replaceBlock(Blocks.AIR.getDefaultState(), Blocks.ICE.getStateForPlacement(c), world, pos, 2);
                         }
                     }
+                } else if (handItem instanceof ItemShiro) {
+                    int chance = (int) (Math.random() * 60);
+                    if ((chance / 10) <= 4) {
+                        double x = target.getPosX();
+                        double y = target.getPosY();
+                        double z = target.getPosZ();
+
+                        World world = target.getEntityWorld();
+
+                        LightningBoltEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
+                        lightning.func_233576_c_(new Vector3d(x, y, z));
+                        lightning.setCaster((ServerPlayerEntity) player);
+
+                        float health = player.getHealth();
+
+                        player.addPotionEffect(new EffectInstance(get(11), 120, 20));
+                        world.addEntity(lightning);
+
+                        DamageSource src = player.getLastDamageSource();
+
+                        if (src == DamageSource.LIGHTNING_BOLT || src == DamageSource.IN_FIRE || src == DamageSource.ON_FIRE) {
+                            player.setHealth(health);
+                        }
+                    }
                 }
             }
         }
     }
+
 }

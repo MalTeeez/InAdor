@@ -21,6 +21,7 @@ public enum ArmorMaterials implements IArmorMaterial {
     SCARF_1(InAdor.MODID + ":scarf_1", 15, new int[] { 4, 0, 0, 0 }, 23,
     SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.2f, () -> { return Ingredient.fromItems(ItemRegister.TIER_KOZA_INGOT.get()); },0);
 
+
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 }; //[Boots, Leggings, Chestplate, Helmet] this*maxDamageFactor = Durability - Base values here are vanilla so seem ok
     private final String name;
     private final int maxDamageFactor; //Durability Scale factor, Iron=15, Diamond=33, Gold=7, Leather=5
@@ -81,6 +82,6 @@ public enum ArmorMaterials implements IArmorMaterial {
 
     @Override
     public float func_230304_f_() {
-        return 0;
+        return this.knockbackResistance;
     }
 }
