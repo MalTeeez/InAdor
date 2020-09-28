@@ -90,35 +90,11 @@ public class EventHandler {
 
                         if (target.getHeight() >= 1) {
                             // spawn both blocks
-                            Block.replaceBlock(Blocks.AIR.getDefaultState(), Blocks.ICE.getStateForPlacement(c), world, pos, 2);
-                            Block.replaceBlock(Blocks.AIR.getDefaultState(), Blocks.ICE.getStateForPlacement(c2), world, pos2, 2);
+                            Block.replaceBlock(Blocks.AIR.getDefaultState(), BlockRegister.FROST_SHARD_BLOCK_2.get().getStateForPlacement(c), world, pos, 2);
+                            Block.replaceBlock(Blocks.AIR.getDefaultState(), BlockRegister.FROST_SHARD_BLOCK.get().getStateForPlacement(c2), world, pos2, 2);
                         } else {
                             // spawn only one
-                            Block.replaceBlock(Blocks.AIR.getDefaultState(), Blocks.ICE.getStateForPlacement(c), world, pos, 2);
-                        }
-                    }
-                } else if (handItem instanceof ItemShiro) {
-                    int chance = (int) (Math.random() * 60);
-                    if ((chance / 10) <= 4) {
-                        double x = target.getPosX();
-                        double y = target.getPosY();
-                        double z = target.getPosZ();
-
-                        World world = target.getEntityWorld();
-
-                        LightningBoltEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
-                        lightning.func_233576_c_(new Vector3d(x, y, z));
-                        lightning.setCaster((ServerPlayerEntity) player);
-
-                        float health = player.getHealth();
-
-                        player.addPotionEffect(new EffectInstance(get(11), 120, 20));
-                        world.addEntity(lightning);
-
-                        DamageSource src = player.getLastDamageSource();
-
-                        if (src == DamageSource.LIGHTNING_BOLT || src == DamageSource.IN_FIRE || src == DamageSource.ON_FIRE) {
-                            player.setHealth(health);
+                            Block.replaceBlock(Blocks.AIR.getDefaultState(), BlockRegister.FROST_SHARD_BLOCK.get().getStateForPlacement(c), world, pos, 2);
                         }
                     }
                 }
