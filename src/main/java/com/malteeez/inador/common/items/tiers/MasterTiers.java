@@ -1,6 +1,5 @@
 package com.malteeez.inador.common.items.tiers;
 
-import com.malteeez.inador.common.items.tool.FrostShard;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

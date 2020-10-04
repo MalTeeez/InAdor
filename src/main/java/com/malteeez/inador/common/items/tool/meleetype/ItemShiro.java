@@ -1,4 +1,4 @@
-package com.malteeez.inador.common.items.tool;
+package com.malteeez.inador.common.items.tool.meleetype;
 
 import com.malteeez.inador.common.items.tool.lib.SwordTool;
 import com.malteeez.inador.init.ModItemGroups;
