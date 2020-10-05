@@ -10,33 +10,37 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
-public class TierKuraArrowEntity extends ArrowEntity implements IForgeRegistryEntry<TierKuraArrowEntity> {
+import javax.annotation.Nullable;
+
+public class TierKuraArrowEntity extends ArrowEntity {
 
     private int ticksInGround;
     protected Particle arrowParticle;
-    ClientWorld world;
+    ClientWorld clientWorld;
+
 
     Vector3d vec = this.getMotion();
-    double[] arr = new double[] {this.getPosX(), this.getPosY(), this.getPosZ(), vec.x, vec.y, vec.z};
+    double[] arr = new double[]{this.getPosX(), this.getPosY(), this.getPosZ(), vec.x, vec.y, vec.z};
 
-    public TierKuraArrowEntity(EntityType<? extends ArrowEntity> type, World worldIn) {
+    public TierKuraArrowEntity(EntityType<? extends ArrowEntity> type,  World worldIn) {
         super(type, worldIn);
-        this.world = (ClientWorld) worldIn;
-        this.arrowParticle = particleGen(this.world);
+        this.world = worldIn;
+        this.arrowParticle = particleGen(this.clientWorld);
     }
+
 
     public AbstractArrowEntity createArrow(World worldIn, ItemStack stack, LivingEntity shooter) {
         TierKuraArrowEntity arrowentity = new TierKuraArrowEntity(worldIn, shooter);
         arrowentity.setPotionEffect(stack);
         return arrowentity;
     }
-
 
 
     public TierKuraArrowEntity(World worldIn, LivingEntity shooter) {
