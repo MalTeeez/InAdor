@@ -4,9 +4,10 @@ import com.malteeez.inador.InAdor;
 import com.malteeez.inador.common.armor.ArmorMaterials;
 import com.malteeez.inador.common.armor.type.Cloth;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
-import com.malteeez.inador.common.items.tool.meleetype.FrostShard;
-import com.malteeez.inador.common.items.tool.meleetype.ItemShiro;
-import com.malteeez.inador.common.items.tool.proj.TierKuraBow;
+import com.malteeez.inador.common.items.tiers.meleetype.magic.FrostShard;
+import com.malteeez.inador.common.items.tiers.meleetype.shiro.ItemShiro;
+import com.malteeez.inador.common.items.tiers.projectile.kura.TierKuraArrowItem;
+import com.malteeez.inador.common.items.tiers.projectile.kura.TierKuraBow;
 import com.malteeez.inador.init.ModItemGroups;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -104,6 +105,7 @@ public class ItemRegister {
     /** <!------ PROJECTILE ITEMS ------!> **/
 
                 public static final RegistryObject<BowItem> TIER_KURA_BOW = ITEMS.register("tier_kura_bow", () -> new TierKuraBow(TierKuraBow.PROPERTIES));
+                public static final RegistryObject<Item> TIER_KURA_ARROW_ITEM = ITEMS.register("tier_kura_arrow", () -> new TierKuraArrowItem(TierKuraBow.PROPERTIES)); // todo ?
 
     /** <!------ BLOCK ITEMS ------!> **/
 

@@ -1,4 +1,4 @@
-package com.malteeez.inador.common.items.tool.meleetype;
+package com.malteeez.inador.common.items.tiers.meleetype.shiro;
 
 import com.malteeez.inador.common.items.tool.lib.SwordTool;
 import com.malteeez.inador.init.ModItemGroups;

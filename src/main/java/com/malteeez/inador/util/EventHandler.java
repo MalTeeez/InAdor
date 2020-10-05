@@ -1,7 +1,7 @@
 package com.malteeez.inador.util;
 
 import com.malteeez.inador.InAdor;
-import com.malteeez.inador.common.items.tool.meleetype.FrostShard;
+import com.malteeez.inador.common.items.tiers.meleetype.magic.FrostShard;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

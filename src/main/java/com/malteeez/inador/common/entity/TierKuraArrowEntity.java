@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class PlsRefactorArrowEntity extends AbstractArrowEntity {
+public class TierKuraArrowEntity extends AbstractArrowEntity {
 
     private int ticksInGround;
     protected Particle arrowParticle;
@@ -22,7 +22,7 @@ public class PlsRefactorArrowEntity extends AbstractArrowEntity {
     Vector3d vec = this.getMotion();
     double[] arr = new double[] {this.getPosX(), this.getPosY(), this.getPosZ(), vec.x, vec.y, vec.z};
 
-    protected PlsRefactorArrowEntity(EntityType<? extends AbstractArrowEntity> type, World worldIn) {
+    protected TierKuraArrowEntity(EntityType<? extends AbstractArrowEntity> type, World worldIn) {
         super(type, worldIn);
         this.world = (ClientWorld) worldIn;
         this.arrowParticle = particleGen(this.world);

@@ -1,6 +1,5 @@
-package com.malteeez.inador.common.items.tool.meleetype;
+package com.malteeez.inador.common.items.tiers.meleetype.magic;
 
-import com.malteeez.inador.InAdor;
 import com.malteeez.inador.api.ability.IAbility;
 import com.malteeez.inador.common.items.tool.lib.SwordTool;
 import com.malteeez.inador.init.ModItemGroups;
@@ -9,7 +8,6 @@ import com.malteeez.inador.init.ModItemGroups;
 import com.malteeez.inador.util.BlockRegister;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
