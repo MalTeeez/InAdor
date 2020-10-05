@@ -1,6 +1,18 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "inador:item/tier_kura_arrow"
-  }
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "inador:item/tier_kura_arrow"
+	},
+	"display": {
+		"firstperson_righthand": {
+			"rotation": [0, -90, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 90, 0]
+		},
+		"gui": {
+			"rotation": [0, -180, 0]
+		}
+	}
 }
