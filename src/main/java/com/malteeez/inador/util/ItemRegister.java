@@ -6,7 +6,7 @@ import com.malteeez.inador.common.armor.type.Cloth;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
 import com.malteeez.inador.common.items.tool.meleetype.FrostShard;
 import com.malteeez.inador.common.items.tool.meleetype.ItemShiro;
-import com.malteeez.inador.common.items.tool.proj.BowNameToBeRefactored;
+import com.malteeez.inador.common.items.tool.proj.TierKuraBow;
 import com.malteeez.inador.init.ModItemGroups;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -103,7 +103,7 @@ public class ItemRegister {
 
     /** <!------ PROJECTILE ITEMS ------!> **/
 
-                public static final RegistryObject<BowItem> FUCKING_BOW = ITEMS.register("fucking_bow_name", () -> new BowNameToBeRefactored(BowNameToBeRefactored.PROPERTIES));
+                public static final RegistryObject<BowItem> TIER_KURA_BOW = ITEMS.register("tier_kura_bow", () -> new TierKuraBow(TierKuraBow.PROPERTIES));
 
     /** <!------ BLOCK ITEMS ------!> **/
 

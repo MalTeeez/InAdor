@@ -1,0 +1,6 @@
+{
+  "parent": "item/bow",
+  "textures": {
+    "layer0": "inador:item/tier_kura_bow_pulling_2"
+  }
+}
