@@ -14,8 +14,9 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
-public class TierKuraArrowEntity extends ArrowEntity {
+public class TierKuraArrowEntity extends ArrowEntity implements IForgeRegistryEntry<TierKuraArrowEntity> {
 
     private int ticksInGround;
     protected Particle arrowParticle;

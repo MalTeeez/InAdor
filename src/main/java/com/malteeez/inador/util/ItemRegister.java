@@ -48,7 +48,6 @@ public class ItemRegister {
                 public static final RegistryObject<Item> TIER_TIRO_INGOT = ITEMS.register("tier_tiro_ingot", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> TIER_TIRO_GADGET = ITEMS.register("tier_tiro_gadget", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> TIER_TIRO_SCARF = ITEMS.register("tier_tiro_scarf", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-
         /** tiered items **/
 
 
