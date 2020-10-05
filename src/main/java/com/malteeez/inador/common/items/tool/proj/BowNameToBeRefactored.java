@@ -1,5 +1,6 @@
 package com.malteeez.inador.common.items.tool.proj;
 
+import com.malteeez.inador.common.entity.PlsRefactorArrowEntity;
 import com.malteeez.inador.init.ModItemGroups;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.BowItem;
@@ -11,6 +12,7 @@ import java.util.function.Predicate;
 public class BowNameToBeRefactored extends BowItem {
 
     public static final Properties PROPERTIES = genProperties();
+    private static PlsRefactorArrowEntity entity;
 
     public BowNameToBeRefactored(Properties builder) {
         super(builder);
@@ -23,7 +25,7 @@ public class BowNameToBeRefactored extends BowItem {
 
     @Override
     public AbstractArrowEntity customArrow(AbstractArrowEntity arrow) {
-        return arrow;
+        return this.entity;
     }
 
     private static Properties genProperties() {
