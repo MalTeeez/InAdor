@@ -1,7 +1,9 @@
 package com.malteeez.inador.common.items.tiers.projectile.kura;
 
+import com.malteeez.inador.InAdor;
 import com.malteeez.inador.common.entity.TierKuraArrowEntity;
 import com.malteeez.inador.init.ModItemGroups;
+import com.malteeez.inador.util.ItemRegister;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
@@ -12,10 +14,15 @@ import net.minecraft.stats.Stats;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.function.Predicate;
 
 public class TierKuraBow extends BowItem {
+
+    private static final Logger logger = LogManager.getLogger();
 
     public static final Properties PROPERTIES = genProperties();
     private static TierKuraArrowEntity entity;
@@ -29,11 +36,6 @@ public class TierKuraBow extends BowItem {
         return ARROWS;
     }
 
-    @Override
-    public TierKuraArrowEntity customArrow(AbstractArrowEntity arrow) {
-        return this.entity;
-    }
-
     private static Properties genProperties() {
         Properties p = new Properties();
         p.group(ModItemGroups.MOD_ITEM_GROUP);
@@ -41,7 +43,7 @@ public class TierKuraBow extends BowItem {
         return p;
     }
 
-    @Override
+    @Override // oh the work required for custom entities.. sad :(
     public void onPlayerStoppedUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft) {
         if (entityLiving instanceof PlayerEntity) {
             PlayerEntity playerentity = (PlayerEntity)entityLiving;
@@ -59,11 +61,10 @@ public class TierKuraBow extends BowItem {
 
                 float f = getArrowVelocity(i);
                 if (!((double)f < 0.1D)) {
-                    boolean flag1 = playerentity.abilities.isCreativeMode || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, stack, playerentity));
+                    boolean flag1 = playerentity.abilities.isCreativeMode || (itemstack.getItem() instanceof TierKuraArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, stack, playerentity));
                     if (!worldIn.isRemote) {
-                        TierKuraArrowItem arrowitem = (TierKuraArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
-                        TierKuraArrowEntity abstractarrowentity = (TierKuraArrowEntity) arrowitem.createArrow(worldIn, itemstack, playerentity);
-                        abstractarrowentity = customArrow(abstractarrowentity);
+                        TierKuraArrowItem arrowitem = (itemstack.getItem() instanceof TierKuraArrowItem ? (TierKuraArrowItem) itemstack.getItem() : (TierKuraArrowItem) ItemRegister.TIER_KURA_ARROW_ITEM.get());
+                        TierKuraArrowEntity abstractarrowentity = arrowitem.createArrow(worldIn, itemstack, playerentity);
                         abstractarrowentity.func_234612_a_(playerentity, playerentity.rotationPitch, playerentity.rotationYaw, 0.0F, f * 3.0F, 1.0F);
                         if (f == 1.0F) {
                             abstractarrowentity.setIsCritical(true);
