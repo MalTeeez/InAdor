@@ -32,7 +32,6 @@ public class InAdor
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(EventHandler.class);
-        MinecraftForge.EVENT_BUS.register(EntityRegistry.class);
         SoundRegister.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BlockRegister.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ItemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
