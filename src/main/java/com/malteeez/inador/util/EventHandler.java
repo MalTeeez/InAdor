@@ -3,6 +3,7 @@ package com.malteeez.inador.util;
 import com.malteeez.inador.InAdor;
 import com.malteeez.inador.common.items.tiers.meleetype.magic.FrostShard;
 
+import com.malteeez.inador.common.items.tiers.projectile.kura.TierKuraBow;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,6 +42,7 @@ public class EventHandler {
                 /** <!--- "ability register" ---!> **/
 
                 FrostShard.ability(player, target, handItem);
+                TierKuraBow.ability(player, target, handItem);
             }
         }
     }
