@@ -1,16 +1,21 @@
 package com.malteeez.inador.common.items.tiers.projectile.kura;
 
 import com.malteeez.inador.InAdor;
+import com.malteeez.inador.api.ability.IAbility;
 import com.malteeez.inador.common.entity.TierKuraArrowEntity;
 import com.malteeez.inador.init.ModItemGroups;
 import com.malteeez.inador.util.ItemRegister;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.*;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
@@ -18,28 +23,30 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Objects;
 import java.util.function.Predicate;
 
-public class TierKuraBow extends BowItem {
+public class TierKuraBow extends BowItem implements IAbility {
 
     private static final Logger logger = LogManager.getLogger();
 
-    public static final Properties PROPERTIES = genProperties();
+    public static final BowItem.Properties PROPERTIES = genProperties();
     private static TierKuraArrowEntity entity;
 
     public TierKuraBow(Properties builder) {
         super(builder);
     }
 
+    // todo, if custom arrow entity is implemented, then change this
     @Override
     public Predicate<ItemStack> getInventoryAmmoPredicate() {
         return ARROWS;
     }
 
     private static Properties genProperties() {
-        Properties p = new Properties();
+        BowItem.Properties p = new BowItem.Properties();
         p.group(ModItemGroups.MOD_ITEM_GROUP);
-        p.rarity(Rarity.UNCOMMON);
+        p.rarity(Rarity.RARE);
         return p;
     }
 
@@ -106,5 +113,23 @@ public class TierKuraBow extends BowItem {
                 }
             }
         }
+    }
+
+    @Override
+    public boolean hasAbility() {
+        return true;
+    }
+
+
+    public static void ability(PlayerEntity player, LivingEntity target, Item handItem) {
+        if (handItem instanceof TierKuraBow) {
+            logger.log(Level.INFO, "kura in player hand rawr");
+            //Entity d = target.getLastAttackedEntity();
+                logger.log(Level.INFO, "debug pass yay");
+                //logger.log(Level.INFO, d);
+        } logger.log(Level.WARN, "[RD= TierKuraBow.java: 132]");
+            //if (handItem.hitEntity(new ItemStack(Items.ARROW), target, player)) {
+                //logger.log(Level.INFO, "debug pass yay");
+            //}
     }
 }
