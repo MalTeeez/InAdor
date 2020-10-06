@@ -1,10 +1,13 @@
 package com.malteeez.inador;
 
+import com.malteeez.inador.common.entities.TierTiroSheepEntity;
 import com.malteeez.inador.util.*;
 import net.minecraft.block.Block;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -39,6 +42,9 @@ public class InAdor
 
     private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("InAdor reached preinit");
+        DeferredWorkQueue.runLater(() -> {
+            GlobalEntityTypeAttributes.put(EntityRegister.TIRO_SHEEP.get(), TierTiroSheepEntity.setCustomAttributes().create());
+        });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
