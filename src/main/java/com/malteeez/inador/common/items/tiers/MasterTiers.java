@@ -28,12 +28,12 @@ public class MasterTiers {
      */
 
     // item tiers!
-    public static IItemTier shiro = makeTier(100000, 2,14,4.0F, 3, 14, Ingredient.EMPTY);
-    public static IItemTier sora = makeTier(100000, 2,14,4.0F, 3, 14, Ingredient.EMPTY);
+    public static final IItemTier shiro = makeTier(100000, 2,14,4.0F, 3, 14, Ingredient.EMPTY);
+    public static final IItemTier sora = makeTier(100000, 2,14,4.0F, 3, 14, Ingredient.EMPTY);
 
     // change as needed please
-    public static IItemTier iceSword = makeTier(1000000, 0, 8, 4.0F, 0, 14, Ingredient.EMPTY);
-
+    public static final IItemTier iceSword = makeTier(1000000, 0, 8, 4.0F, 0, 14, Ingredient.EMPTY);
+    public static final IItemTier katana = makeTier(20000, 2, 7, 16.0F, 3, 14, Ingredient.EMPTY);
     /**
      *
      * @param max - max uses

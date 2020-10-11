@@ -1,6 +1,7 @@
 package com.malteeez.inador.common.items.tiers.meleetype.magic;
 
 import com.malteeez.inador.api.ability.IAbility;
+import com.malteeez.inador.api.anno.Ability;
 import com.malteeez.inador.common.items.tool.lib.SwordTool;
 import com.malteeez.inador.init.ModItemGroups;
 
@@ -42,6 +43,7 @@ public class FrostShard extends SwordTool implements IAbility {
         return true;
     }
 
+    @Ability(NAME = "Freeze", CLASS = FrostShard.class)
     public static void ability(PlayerEntity player, LivingEntity target, Item handItem) {
         if (handItem instanceof FrostShard) {
             target.addPotionEffect(slow_instance);

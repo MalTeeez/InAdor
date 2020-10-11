@@ -42,8 +42,9 @@ public class InAdor
 
     private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("InAdor reached preinit");
-        DeferredWorkQueue.runLater(() -> {
-            GlobalEntityTypeAttributes.put(EntityRegister.TIRO_SHEEP.get(), TierTiroSheepEntity.setCustomAttributes().create());
+        DeferredWorkQueue.runLater(() -> { /* adding func_233813_a() to return AttributeModifierMap (required return type),
+                                                todo fix NPE: Registry Object not present: inador:tiro_sheep*/
+            GlobalEntityTypeAttributes.put(EntityRegister.TIRO_SHEEP.get(), TierTiroSheepEntity.setCustomAttributes().func_233813_a_());
         });
     }
 

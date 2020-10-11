@@ -5,6 +5,7 @@ import com.malteeez.inador.util.ItemRegister;
 import com.malteeez.inador.util.SoundRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -28,9 +29,17 @@ public class TierTiroSheepEntity extends AnimalEntity {
     public static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(ItemRegister.TIER_TIRO_INGOT.get());
     private EatGrassGoal eatGrassGoal;
     private int grassTimer;
+    private World worldIn;
+
+    /**
+     *
+     * @param type - EntityType
+     * @param worldIn - world the entity is in
+     */
 
     public TierTiroSheepEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
         super(type, worldIn);
+        this.worldIn = worldIn;
     }
 
     // obfuscated func = registerAttribute();
@@ -110,4 +119,5 @@ public class TierTiroSheepEntity extends AnimalEntity {
             super.handleStatusUpdate(id);
         }
     }
+
 }

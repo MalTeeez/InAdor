@@ -5,6 +5,7 @@ import com.malteeez.inador.common.armor.ArmorMaterials;
 import com.malteeez.inador.common.armor.type.Cloth;
 import com.malteeez.inador.common.items.tiers.MasterTiers;
 import com.malteeez.inador.common.items.tiers.meleetype.magic.FrostShard;
+import com.malteeez.inador.common.items.tiers.meleetype.magic.KatanaPlsRefactor;
 import com.malteeez.inador.common.items.tiers.meleetype.shiro.ItemShiro;
 import com.malteeez.inador.common.items.tiers.projectile.kura.TierKuraArrowItem;
 import com.malteeez.inador.common.items.tiers.projectile.kura.TierKuraBow;
@@ -60,7 +61,7 @@ public class ItemRegister {
                 public static final RegistryObject<Item> EXT_FRG = ITEMS.register("ext_frg", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> EXT_GEM = ITEMS.register("ext_gem", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
                 public static final RegistryObject<Item> BREAKER_BLADE = ITEMS.register("breaker_blade", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
-                public static final RegistryObject<Item> EXT_KAT = ITEMS.register("ext_kat", () -> new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)));
+                public static final RegistryObject<Item> EXT_KAT = ITEMS.register("ext_kat", () -> new KatanaPlsRefactor(MasterTiers.katana, 7, 16.0F, KatanaPlsRefactor.properties.group(ModItemGroups.MOD_ITEM_GROUP)));
 
         /** misc weapons **/
 
